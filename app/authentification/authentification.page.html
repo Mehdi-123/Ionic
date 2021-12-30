@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Authentification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <h3 class="title top">PLEASE SIGN IN !</h3>
+  <form [formGroup]="authForm" (ngSubmit)="signIn()">
+    <ion-item lines="none">
+      <ion-input type="email" class="top" formControlName='email' placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input type="password" formControlName='password' placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-button class="btn" fill="clear" type="submit">SIGN IN</ion-button>
+  </form>
+  <ion-button class="btn" fill="clear" (click)="signUp()">SIGN UP</ion-button>
+</ion-content>
